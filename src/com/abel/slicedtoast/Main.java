@@ -17,13 +17,13 @@ public class Main implements IXposedHookZygoteInit {
 	public static boolean disabled, custom;
 	public static Toast currentToast;
 	public static Handler handle;
-	public static final String PACKAGE_NAME = Main.class.getPackage().getName();
+	public static final String PACKAGE_NAME = Settings.class.getPackage().getName();
 	public static XSharedPreferences preferences;
 	
 	private static void log(String log) {
 		XposedBridge.log("SlicedT Log: " + log);
 	}
-
+	
 	@Override
 	public void initZygote(StartupParam startupParam) throws Throwable {
 		log("Initialized.");
@@ -32,10 +32,10 @@ public class Main implements IXposedHookZygoteInit {
 			@Override
 			protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
 				currentToast = (Toast) param.thisObject;
-				getVars();
+				updateVars();
 				if (disabled){
 					currentToast.cancel();
-					log("toasts disabled");
+					log("Toasts disabled");
 				}
 			}
 			
@@ -53,11 +53,10 @@ public class Main implements IXposedHookZygoteInit {
 		});
 	}
 	
-	public void getVars(){
+	public void updateVars(){
 		preferences = new XSharedPreferences(PACKAGE_NAME);
 		disabled = preferences.getBoolean("checkbox_disable", false);
 		custom = preferences.getBoolean("checkbox_custom", false);
-				
 		if (custom){
 			userToastLength = Long.valueOf(preferences.getString("custom_preference", "850"));
 			if (userToastLength < 0){

@@ -30,13 +30,14 @@ public class Settings extends Activity {
 	
 
 	public static class PrefsFragment extends PreferenceFragment {
+		@SuppressWarnings("deprecation")
 		@Override
 		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-			getPreferenceManager().setSharedPreferencesMode(MODE_PRIVATE);
+			getPreferenceManager().setSharedPreferencesMode(MODE_WORLD_READABLE);
 			addPreferencesFromResource(R.xml.preferences);
 			
-			//preference soft reset listener
+			/** SOFT RESET **/
 	        Preference reset = (Preference) findPreference("reset");
 			reset.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 				@Override
@@ -50,8 +51,9 @@ public class Settings extends Activity {
 					return true;
 				}
 			});
-			Preference toast = (Preference) findPreference("toast");
-			toast.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			
+			/** TOAST TESTER **/
+			findPreference("toast").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 				@Override
 				public boolean onPreferenceClick(Preference p) {
 					Toast.makeText(getActivity(), "Toasting", Toast.LENGTH_LONG).show();
