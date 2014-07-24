@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Sliced Toast</string>
+    <string name="listname">Choose Toast Length</string>
+    <string name="chkbx1">Disable all toasts</string>
+    <string name="chkbx2">Check to use a custom length</string>
+    <string name="custom">Custom (maximum 3000ms)</string>
+    
+    <string-array name="string_human_value">
+	    <item>0.5 Sec</item>
+	    <item>1 Sec</item>
+	    <item>1.5 Sec</item>
+	    <item>2 Sec</item>
+	    <item>2.5 Sec</item>
+	</string-array>
+	<string-array name="string_phone_value">
+	    <item>500</item>
+	    <item>1000</item>
+	    <item>1500</item>
+	    <item>2000</item>
+	    <item>2500</item>
+	</string-array>
+</resources>

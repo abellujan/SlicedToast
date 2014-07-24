@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory
+            android:title="soft reset in order to enable settings">
+        
+        <ListPreference android:key="list_preference"
+               	android:title="@string/listname"
+			    android:entries="@array/string_human_value"
+			    android:entryValues="@array/string_phone_value"
+			    android:defaultValue="1000">
+		</ListPreference>
+       
+ 		<CheckBoxPreference
+                android:key="checkbox_custom"
+                android:title="@string/chkbx2" />
+        
+    	<EditTextPreference
+               android:key="custom_preference"
+               android:title="@string/custom" />
+    	
+    	<CheckBoxPreference
+                android:key="checkbox_disable"
+                android:title="@string/chkbx1" />
+    	
+    	<Preference 
+    	    	android:title="Soft Reset"
+                android:key="reset" 
+                android:summary="Will reboot without warning on click!"/>
+    	    
+    </PreferenceCategory>
+ 
+</PreferenceScreen>         
