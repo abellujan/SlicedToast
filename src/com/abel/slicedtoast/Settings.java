@@ -1,3 +1,7 @@
+/**
+ * Copyright 2014 Abel Lujan
+ */
+
 package com.abel.slicedtoast;
 
 
