@@ -2,26 +2,34 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
     
     <PreferenceCategory
-            android:title="soft reset in order to enable settings">
+            android:title="toast settings">
         
         <ListPreference android:key="list_preference"
                	android:title="@string/listname"
 			    android:entries="@array/string_human_value"
 			    android:entryValues="@array/string_phone_value"
-			    android:defaultValue="1000">
+			    android:defaultValue="1000"
+			    android:dependency="checkbox_disable">
 		</ListPreference>
        
  		<CheckBoxPreference
                 android:key="checkbox_custom"
-                android:title="@string/chkbx2" />
+                android:title="@string/chkbx2" 
+                android:dependency="checkbox_disable" />
         
     	<EditTextPreference
                android:key="custom_preference"
-               android:title="@string/custom" />
+               android:title="@string/custom" 
+               android:dependency="checkbox_custom" />
     	
     	<CheckBoxPreference
                 android:key="checkbox_disable"
-                android:title="@string/chkbx1" />
+                android:title="@string/chkbx1" 
+                android:disableDependentsState="true" />
+    	
+    	<Preference 
+    	    	android:title="Toast Test"
+                android:key="toast" />
     	
     	<Preference 
     	    	android:title="Soft Reset"

@@ -14,6 +14,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.widget.Toast;
 
 public class Settings extends Activity {
 	static String[] args = {"setprop ctl.restart surfaceflinger","setprop ctl.restart zygote"};
@@ -46,6 +47,14 @@ public class Settings extends Activity {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					return true;
+				}
+			});
+			Preference toast = (Preference) findPreference("toast");
+			toast.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+				@Override
+				public boolean onPreferenceClick(Preference p) {
+					Toast.makeText(getActivity(), "Toasting", Toast.LENGTH_LONG).show();
 					return true;
 				}
 			});
