@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Sliced Toast</string>
+    <string name="listname">Wybierz długość kafelka</string>
+    <string name="chkbx1">Wyłącz wszystkie kafelki</string>
+    <string name="chkbx2">Użyj niestandardowej długości</string>
+    <string name="custom">Długość (max 3000ms)</string>
+    
+    <string-array name="string_human_value">
+	    <item>0.5 sek</item>
+	    <item>1 sek</item>
+	    <item>1.5 sek</item>
+	    <item>2 sek</item>
+	    <item>2.5 sek</item>
+	</string-array>
+	<string-array name="string_phone_value">
+	    <item>500</item>
+	    <item>1000</item>
+	    <item>1500</item>
+	    <item>2000</item>
+	    <item>2500</item>
+	</string-array>
+</resources>

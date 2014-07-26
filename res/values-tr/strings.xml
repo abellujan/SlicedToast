@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Sliced Toast</string>
+    <string name="listname">Toast'ın Ekranda Kalacağı Uzunluğu Seçin</string>
+    <string name="chkbx1">Tüm toast bildirimlerini devre dışı bırak</string>
+    <string name="chkbx2">Uzunluk için özel bir değer seçin</string>
+    <string name="custom">Özel (En fazla 3 saniye)</string>
+    
+    <string-array name="string_human_value">
+	    <item>0.5 saniye</item>
+	    <item>1 saniye</item>
+	    <item>1.5 saniye</item>
+	    <item>2 saniye</item>
+	    <item>2.5 saniye</item>
+	</string-array>
+	<string-array name="string_phone_value">
+	    <item>500</item>
+	    <item>1000</item>
+	    <item>1500</item>
+	    <item>2000</item>
+	    <item>2500</item>
+	</string-array>
+</resources>
