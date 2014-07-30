@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Sliced Toast</string>
-    <string name="listname">Toast'ın Ekranda Kalacağı Uzunluğu Seçin</string>
+    <string name="listname">Toast\'ın Ekranda Kalacağı Uzunluğu Seçin</string>
     <string name="chkbx1">Tüm toast bildirimlerini devre dışı bırak</string>
     <string name="chkbx2">Uzunluk için özel bir değer seçin</string>
     <string name="custom">Özel (En fazla 3 saniye)</string>
